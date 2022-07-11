@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= doctitle %></title>
+    <link rel="styleSheet" href="/css/productShop.css" >
+  
+   
+</head>
+
+<body>
+    <%- include('../includes/nav') %>
+
+    <main>
+       <% if(prods.length >0 ) { %>
+         <div class="grid">
+             <% for (let pr in prods) { %>
+                <article class="card product-item">
+                    <header class="card__header">
+                        <h1 class="product__title"><%= prods[pr].title %> </h1>
+                        <!-- <h1 class="product__title"><%= prods[pr].title %> </h1> -->
+                    </header>
+                    <div class="card__image">
+                        <img src="<%= prods[pr].imgUrl %>" alt="A Book">
+                    </div>
+                    <div class="card__content">
+                        <h2 class="product__price"><%= prods[pr].price %></h2>
+                        <p class="product__description"><%= prods[pr].desc %></p>
+                    </div>
+                    <div class="card__actions">
+                        <a class="btn" href="/products/<%= prods[pr].id %>">Details</a> 
+                        <form action="/cart" method="POST">
+                            <input type="hidden" name="productId" value="<%= prods[pr].id %>">
+                            <button  class="btn"type="submit">Add Product</button>
+                            
+                        </form>
+                    </div>
+                </article>
+                <% } %>
+        </div> 
+        <% } else {%>
+            <h1>No Items Found</h1>
+            <%} %>
+    </main>
+</body>
+
+</html>

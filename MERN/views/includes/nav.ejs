@@ -1,0 +1,15 @@
+<nav>
+	<a href="#">Home</a>
+
+	<%  if(isAuthenticated){ %>
+	<a href="/secret">About</a>
+	<%}else {%>
+		
+	<a href="/register">Register</a>
+	<a href="/login">Login</a>
+	 <% }%>
+<%  if(isAuthenticated){ %>
+	<a href="/logout">Logout</a>
+	<%}%>
+	<div class="animation start-home"></div>
+</nav>

@@ -1,0 +1,15 @@
+{
+  "name": "asmd",
+  "version": "1.0.0",
+  "description": "ADDMUl",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "vaibhav",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}

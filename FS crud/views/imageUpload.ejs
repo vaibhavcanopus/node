@@ -1,0 +1,22 @@
+<%- include('includes/nav.ejs') %>
+</head>
+
+<body>
+
+    <%- include('includes/head.ejs') %>
+    <main>
+        <form action="/imageupload" method="POST" class="product-form" >
+            <div class="form-control">
+                <label for="title">Image Upload</label>
+                <input type="text" name="image" placeholder="Image " id="title">
+            </div>
+            
+         
+                <button class="btn" type="submit">Add Image</button>
+          
+          
+        </form>
+    </main>
+</body>
+
+</html>
